@@ -1,3 +1,4 @@
+import math
 from abc import ABC, abstractmethod
 
 
@@ -32,3 +33,17 @@ class Square(Shape):
 
     def calc_area(self) -> float:
         return self.length * self.length
+
+
+class RightAngledTriangle(Shape):
+    def __init__(self, height: int, base: int):
+        self.height = height
+        self.base = base
+
+    def calc_perimeter(self) -> float:
+        hypotenuse_squared = self.height ** 2 + self.base ** 2
+        hypotenuse = math.sqrt(hypotenuse_squared)
+        return self.base + self.height + hypotenuse
+
+    def calc_area(self) -> float:
+        return (self.base * self.height)/2
