@@ -22,6 +22,15 @@ class TestShape(unittest.TestCase):
         self.assertEqual(perimeter, 20)
         self.assertEqual(area, 24)
 
+    def test_right_angled_triangle(self):
+        t = RightAngledTriangle(9, 12)
+
+        perimeter = t.calc_perimeter()
+        area = t.calc_area()
+
+        self.assertEqual(perimeter, 36)
+        self.assertEqual(area, 54)
+
 
 if __name__ == '__main__':
     unittest.main()
