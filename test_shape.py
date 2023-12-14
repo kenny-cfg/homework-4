@@ -13,6 +13,15 @@ class TestShape(unittest.TestCase):
         self.assertEqual(perimeter, 24)
         self.assertEqual(area, 36)
 
+    def test_rectangle(self):
+        r = Rectangle(6, 4)
+
+        perimeter = r.calc_perimeter()
+        area = r.calc_area()
+
+        self.assertEqual(perimeter, 20)
+        self.assertEqual(area, 24)
+
 
 if __name__ == '__main__':
     unittest.main()
