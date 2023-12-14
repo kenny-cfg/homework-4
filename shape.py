@@ -24,15 +24,10 @@ class Rectangle(Shape):
         return self.length * self.width
 
 
-class Square(Shape):
+# I know the UML diagram inherits from Shape directly, but this is nicer.
+class Square(Rectangle):
     def __init__(self, a: int):
-        self.length = a
-
-    def calc_perimeter(self) -> float:
-        return 4 * self.length
-
-    def calc_area(self) -> float:
-        return self.length * self.length
+        super().__init__(a, a)
 
 
 class RightAngledTriangle(Shape):
@@ -46,4 +41,4 @@ class RightAngledTriangle(Shape):
         return self.base + self.height + hypotenuse
 
     def calc_area(self) -> float:
-        return (self.base * self.height)/2
+        return (self.base * self.height) / 2
