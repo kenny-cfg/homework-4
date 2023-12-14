@@ -1,5 +1,7 @@
 import unittest
 
+from shape import Square
+
 
 class TestShape(unittest.TestCase):
     def test_square(self):
