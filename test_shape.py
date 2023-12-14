@@ -1,6 +1,6 @@
 import unittest
 
-from shape import Square
+from shape import Square, Rectangle
 
 
 class TestShape(unittest.TestCase):
